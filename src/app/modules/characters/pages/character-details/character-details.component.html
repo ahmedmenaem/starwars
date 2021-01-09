@@ -1,0 +1,87 @@
+<div class="film-details">
+  <div class="container">
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+    <div *ngIf="characterDetails$ | async as characterDetails; else loading">
+      <div class="film-header">
+        <p>Characterdeatils</p>
+        <h1>{{ characterDetails.name }}</h1>
+      </div>
+      <div class="info">
+        <div class="details">
+          <h2>Details</h2>
+          <div>
+            <p>
+              <span class="title">Gender: </span
+              ><span>{{ characterDetails.gender }}</span>
+            </p>
+            <p>
+              <span class="title">Hair color: </span>
+              <span>{{ characterDetails.hairColor }}</span>
+            </p>
+            <p>
+              <span class="title">Height: </span>
+              <span>{{ characterDetails.height }}</span>
+            </p>
+            <p>
+              <span class="title">Mass: </span>
+              <span>{{ characterDetails.mass }}</span>
+            </p>
+          </div>
+          <p class="description">
+            {{ characterDetails?.description }}
+          </p>
+        </div>
+        <div class="carousel">
+          <div class="carousel__main">
+            <img
+              [src]="characterDetails.avatar"
+              [alt]="characterDetails.name"
+            />
+          </div>
+          <div class="carousel__footer"></div>
+        </div>
+      </div>
+      <div class="characters">
+        <h3>Charaktere:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Planeten:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Raumschiffe:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Fahrzeuge:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

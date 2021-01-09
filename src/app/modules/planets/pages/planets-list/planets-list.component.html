@@ -1,0 +1,17 @@
+<div class="films-list">
+  <div class="container">
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+
+    <!-- heading -->
+    <main *ngIf="planets$ | async as planets; else loading">
+      <h1>Planeten</h1>
+      <div class="grid">
+        <ng-container *ngFor="let planet of planets">
+          <app-planet [planet]="planet"></app-planet>
+        </ng-container>
+      </div>
+    </main>
+  </div>
+</div>

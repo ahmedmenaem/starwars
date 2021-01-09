@@ -1,0 +1,81 @@
+<div class="film-details">
+  <div class="container">
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+    <div *ngIf="filmDetails$ | async as filmDetails; else loading">
+      <div class="film-header">
+        <p>Filmdetails</p>
+        <h1>{{ filmDetails.title }}</h1>
+        <p>Episode {{ filmDetails.episodeId }}</p>
+      </div>
+      <div class="info">
+        <div class="details">
+          <h3>Details</h3>
+          <div>
+            <p>
+              <span class="title">Director: </span
+              ><span>{{ filmDetails.director }}</span>
+            </p>
+            <p>
+              <span class="title">Producer: </span>
+              <span>{{ filmDetails.producer }}</span>
+            </p>
+            <p>
+              <span class="title">Release Date: </span>
+              <span>{{ filmDetails.releaseDate }}</span>
+            </p>
+          </div>
+          <p class="description">
+            {{ filmDetails.description }}
+          </p>
+        </div>
+        <div class="carousel">
+          <div class="carousel__main">
+            <img [src]="filmDetails.avatar" [alt]="filmDetails.name" />
+          </div>
+          <div class="carousel__footer"></div>
+        </div>
+      </div>
+      <div class="characters">
+        <h3>Charaktere:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Planeten:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Raumschiffe:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Fahrzeuge:</h3>
+        <div>
+          <p>Luke Skywalker</p>
+          <p>C3-PO</p>
+          <p>R2D2</p>
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

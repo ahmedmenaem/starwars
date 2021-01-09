@@ -1,0 +1,17 @@
+<div class="films-list">
+  <div class="container">
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+
+    <!-- heading -->
+    <main *ngIf="films$ | async as films; else loading">
+      <h1>Filme</h1>
+      <div class="grid">
+        <ng-container *ngFor="let film of films">
+          <app-film [film]="film"></app-film>
+        </ng-container>
+      </div>
+    </main>
+  </div>
+</div>

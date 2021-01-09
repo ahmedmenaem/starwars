@@ -1,0 +1,28 @@
+.films-list {
+  margin: 20px 0;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    h1 {
+      text-align: center;
+      font-size: 75px/90px;
+      margin: 30px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  .container {
+    width: 95% !important;
+  }
+}

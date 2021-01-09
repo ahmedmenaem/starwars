@@ -1,0 +1,22 @@
+<div class="planet">
+  <div class="thumbanil">
+    <img [src]="planet.avatar" [alt]="planet.name" />
+  </div>
+  <div class="details">
+    <h3>{{ planet.name }}</h3>
+    <div>
+      <p>
+        Climate: <span>{{ planet.climate }}</span>
+      </p>
+      <p>
+        Gravity: <span>{{ planet.gravity }}</span>
+      </p>
+      <p>
+        Orbital Period: <span>{{ planet.orbitalPeriod }}</span>
+      </p>
+    </div>
+    <div class="more">
+      <a [routerLink]="[planet.id]">Mehr Informationen</a>
+    </div>
+  </div>
+</div>

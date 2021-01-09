@@ -1,0 +1,93 @@
+<div class="film-details">
+  <div class="container">
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+
+    <div *ngIf="planetDetails$ | async as planetDetails; else loading">
+      <div class="film-header">
+        <p>Planetendeatils</p>
+        <h1>{{ planetDetails.name }}</h1>
+      </div>
+      <div class="info">
+        <div class="details">
+          <h2>Details</h2>
+          <div>
+            <p>
+              <span class="title">Type: </span
+              ><span>{{ planetDetails.terrain }}</span>
+            </p>
+            <p>
+              <span class="title">Created at: </span>
+              <span>{{ planetDetails.created | date: 'fullDate' }}</span>
+            </p>
+            <p>
+              <span class="title">Genere: </span>
+              <span>{{ planetDetails.gravity }}</span>
+            </p>
+            <p>
+              <span class="title">Diameter: </span>
+              <span>{{ planetDetails.diameter }}</span>
+            </p>
+            <p>
+              <span class="title">Population: </span>
+              <span>{{ planetDetails.population }}</span>
+            </p>
+            <p>
+              <span class="title">First Apperance: </span>
+              <span>{{ planetDetails.created | date: 'short' }}</span>
+            </p>
+          </div>
+          <p class="description">
+            {{ planetDetails.description }}
+          </p>
+        </div>
+        <div class="carousel">
+          <div class="carousel__main">
+            <img [src]="planetDetails.avatar" [alt]="planetDetails.name" />
+          </div>
+          <div class="carousel__footer"></div>
+        </div>
+      </div>
+      <div class="characters">
+        <h3>Filme:</h3>
+        <div>
+          <p>Film1</p>
+          <p>Film2</p>
+          <p>Film3</p>
+          <p>Film4</p>
+          <p>Film5</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Planeten:</h3>
+        <div>
+          <p>Arid</p>
+          <p>Tatooine</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Raumschiffe:</h3>
+        <div>
+          <p>Executor</p>
+          <p>Sentinel-class Landing craft</p>
+          <p>Death Star</p>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="characters">
+        <h3>Fahrzeuge:</h3>
+        <div>
+          <p>Sand Crawler</p>
+          <p>Snowspeeder</p>
+          <p>AT-AT</p>
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

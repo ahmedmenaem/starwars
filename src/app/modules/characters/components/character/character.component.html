@@ -1,0 +1,22 @@
+<div class="film">
+  <div class="thumbanil">
+    <img [src]="character.avatar" [alt]="character.name" />
+  </div>
+  <div class="details">
+    <h3>{{ character.name }}</h3>
+    <div>
+      <p>
+        Mass: <span>{{ character.mass }}</span>
+      </p>
+      <p>
+        Gender: <span>{{ character.gender }}</span>
+      </p>
+      <p>
+        Birth Year: <span>{{ character.birthYear }}</span>
+      </p>
+    </div>
+    <div class="more">
+      <a [routerLink]="[character.id]">Mehr Informationen</a>
+    </div>
+  </div>
+</div>

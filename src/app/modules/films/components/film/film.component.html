@@ -1,0 +1,22 @@
+<div class="film">
+  <div class="thumbanil">
+    <img [src]="film.avatar" [alt]="film.name" />
+  </div>
+  <div class="details">
+    <h3>{{ film.title }}</h3>
+    <div>
+      <p>
+        Director: <span>{{ film.director }}</span>
+      </p>
+      <p>
+        Producer: <span>{{ film.producer }}</span>
+      </p>
+      <p>
+        Release Date: <span>{{ film.releaseDate }}</span>
+      </p>
+    </div>
+    <div class="more">
+      <a [routerLink]="[film.id]">Mehr Informationen</a>
+    </div>
+  </div>
+</div>

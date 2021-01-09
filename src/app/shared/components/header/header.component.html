@@ -1,0 +1,64 @@
+<header>
+  <div class="container">
+    <div class="header">
+      <nav>
+        <h1 class="logo">
+          <img class="logo__image" src="./assets/logo.png" alt="starwars" />
+        </h1>
+        <ul>
+          <li>
+            <a
+              [routerLink]="['en/']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              Star Wars
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['en/films']" routerLinkActive="active">Filme</a>
+          </li>
+          <li>
+            <a [routerLink]="['en/characters']" routerLinkActive="active"
+              >Charaktere</a
+            >
+          </li>
+          <li>
+            <a [routerLink]="['en/planets']" routerLinkActive="active"
+              >Planeten</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Search"
+          (keyup)="handleSearch($event)"
+        />
+      </div>
+    </div>
+    <ul class="nav">
+      <li>
+        <a
+          [routerLink]="['en/']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Star Wars
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['en/films']" routerLinkActive="active">Filme</a>
+      </li>
+      <li>
+        <a [routerLink]="['en/characters']" routerLinkActive="active"
+          >Charaktere</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['en/planets']" routerLinkActive="active">Planeten</a>
+      </li>
+    </ul>
+  </div>
+</header>
